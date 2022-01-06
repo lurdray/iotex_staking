@@ -1,0 +1,39 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+ <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+	  <div class="container-full">
+
+		<!-- Main content -->
+		<section class="content justify-content-center align-items-center">
+			<div class="row justify-content-center align-items-center">
+
+				<div class="col-lg-4 col-12">
+
+					<div class="box">
+						<h3 class="text-center">Wallet</h3><br />
+
+						<div class="box-body" >
+							<p>Iotexchart Balance: 3</p>
+							<p>Iotex Balance: 4</p>
+
+							<a href="{% url 'wallet:send1' %}">Send Iotex</a>
+							<a href="{% url 'wallet:send2' %}">Send Iotexchart</a>
+							<a href="{% url 'wallet:receive' %}">Receive</a>
+
+						</div>
+
+		</section>
+		<!-- /.content -->
+	  </div>
+  </div>
+  <!-- /.content-wrapper -->
+
+
+{% endblock %}
+
+

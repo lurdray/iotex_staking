@@ -1,0 +1,38 @@
+{% extends "main/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+ <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+	  <div class="container-full">
+
+		<!-- Main content -->
+		<section class="content justify-content-center align-items-center">
+			<div class="row justify-content-center align-items-center">
+
+				<div class="col-lg-4 col-12">
+
+					<div class="box">
+						<h3 class="text-center">Sign Up</h3><br />
+
+						<div class="box-body" >
+							<input type="text" name="username" placeholder="Username"><br />
+							<input type="password" name="password1" placeholder="Password"><br />
+							<input type="password" name="password2" placeholder="Confirm Password"><br />
+							<br /><br />
+
+							<button type="button" class="waves-effect waves-light btn mb-5 bg-gradient-warning justify-content-center; align-items-center" style="width:360px">Approve</button>
+						</div>
+
+		</section>
+		<!-- /.content -->
+	  </div>
+  </div>
+  <!-- /.content-wrapper -->
+
+
+{% endblock %}
+
+
