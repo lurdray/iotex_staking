@@ -51,58 +51,49 @@
 					<div class="table-responsive">
 					  <table class="table table-hover">
 						<tr>
-						  <th>Dates</th>
 						  <th>Stakes</th>
+						  <th>Durations</th>
 						  <th>Returns</th>
-						  <th>Due Dates</th>
-						  <th>Status</th>
+						  <th>Action</th>
 						  
 						</tr>
 
-						<tr>
-							<td>sdsdsd</td>
-							<td>sdsdsd</td>
-							<td>sdsdsd</td>
-							<td>sdsdsd</td>
-							<td>sdsdsd</td>
+						{% if my_stakes %}
 
-						</tr>
-						<tr>
-							<td>sdsdsd</td>
-							<td>sdsdsd</td>
-							<td>sdsdsd</td>
-							<td>sdsdsd</td>
-							<td>sdsdsd</td>
+							{% for item in my_stakes %}
+								<tr>
+									<td>
+										<h3>{{ item.amount }}</h3>
+										<br />
+										{{ item.pub_date }}
+										<br />
+										Status: {{ item.payment_confirmation_status }}
+									</td>
+									<td>{{ item.duration }}</td>
+									<td>
+										<h3>{{ item.returns }}</h3>
+										<br />
+										{{ item.due_date }}
+										<br />
+										Status: {{ item.closed_status }}
+									</td>
+									<td>
+											Status: {{ item.request_payment_status }}<br />
+											<a href="{% url 'staking:request_payment' item.id %}" class="waves-effect waves-light btn  bg-gradient-primary">Request Returns</a></td>
 
-						</tr>
-						<tr>
-							<td>sdsdsd</td>
-							<td>sdsdsd</td>
-							<td>sdsdsd</td>
-							<td>sdsdsd</td>
-							<td>sdsdsd</td>
+								</tr>
+							{% endfor %}
 
-						</tr>
-						<tr>
-							<td>sdsdsd</td>
-							<td>sdsdsd</td>
-							<td>sdsdsd</td>
-							<td>sdsdsd</td>
-							<td>sdsdsd</td>
 
-						</tr>
+						{% else %}
 
+							<p>Sorry, No Stake yet!,  <a href="{% url 'staking:stake' %}">Stake Now!</a></p>
+
+						{% endif %}
 
 					</table>
 				</div>
 			</div>
-
-
-
-
-
-
-
 									
 			</div>
 		</div>

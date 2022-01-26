@@ -11,6 +11,7 @@ urlpatterns = [
     path("wallet/", include("wallet.urls")),
     path("", include("stake.urls")),
     path("app/", include("app.urls")),
+    path("admin-app/", include("admin_app.urls")),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

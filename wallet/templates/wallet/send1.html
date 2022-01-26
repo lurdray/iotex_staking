@@ -18,9 +18,20 @@
 						<h3 class="text-center">Send Iotex</h3><br />
 
 						<div class="box-body" >
-							<input type="text" name="address" placeholder="Address">
-							<button type="submit">Send</button>
-
+							<form method="post">
+								{% csrf_token %}
+							<div class="form-group">
+								<label class="form-label">Recepient's Address</label>
+								 <input name="address" class="form-control" type="text" placeholder="address">
+							</div>
+							<div class="form-group">
+								<label class="form-label">Amount</label>
+								 <input name="amount" class="form-control" type="number" placeholder="Amount">
+							</div>
+							
+							<button type="submit" class="waves-effect waves-light btn mb-5 bg-gradient-success justify-content-center; align-items-center" style="width:360px">Send</button>
+							<p class="mt-15 mb-0">please make sure the recepient is on the IoTex network, if you are sending to an exchange account, please verify that it is accepting assets on IoTex network.</p>
+						</form>
 						</div>
 
 		</section>

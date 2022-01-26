@@ -18,12 +18,12 @@
 						<h3 class="text-center">Wallet</h3><br />
 
 						<div class="box-body" >
-							<p>Iotexchart Balance: 3</p>
-							<p>Iotex Balance: 4</p>
+							<p>Iotexchart Balance: {{ bep_balance.balance }}</p>
+							<p>Iotex Balance: {{ bnb_balance.balance }}</p>
 
-							<a href="{% url 'wallet:send1' %}">Send Iotex</a>
-							<a href="{% url 'wallet:send2' %}">Send Iotexchart</a>
-							<a href="{% url 'wallet:receive' %}">Receive</a>
+							<a class="waves-effect waves-light btn  bg-gradient-primary" href="{% url 'wallet:send1' %}">Send Iotex</a>
+							<a class="waves-effect waves-light btn  bg-gradient-success" href="{% url 'wallet:send2' %}">Send Iotexchart</a>
+							<a class="waves-effect waves-light btn  bg-gradient-danger" href="{% url 'wallet:receive' %}">Receive</a>
 
 						</div>
 

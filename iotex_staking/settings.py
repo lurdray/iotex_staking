@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "stake",
     "wallet",
     "app",
+    "admin_app",
 ]
 
 MIDDLEWARE = [
